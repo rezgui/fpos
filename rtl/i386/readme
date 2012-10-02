@@ -1,0 +1,17 @@
+This directory contains only RTL parts specific to the processor I386 family.
+
+(They are specific because they contain assembler instructions)
+
+Include files for system are :
+  heap.inc (heap handling)
+  set.inc  (sets operations)
+  math.inc (mathematic operations using the coprocessor)
+  i386.inc (several functions/procedures containing assembler parts)
+  setjump.inc (setjmp/longjmp implementation for exceptions)
+  rttip.inc (rtti handling, for speed reasons)
+  
+Units are :
+  strings.pp (written in assembler for speed)
+  cpu.pp     (routines to access cpu info)
+  mmx.pp     (special mmx routines)
+  

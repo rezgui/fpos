@@ -1,0 +1,3 @@
+title FreePascal OS 0.01
+kernel /boot/fpos
+boot
