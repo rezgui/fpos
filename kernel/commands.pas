@@ -155,14 +155,15 @@ end;
 
 procedure ShowThanks;
 const
-  ThanksList: array [1..7] of String = (
-    'Brendan     (http://www.osdever.net\bkerndev)',
-    'Mike        (http://www.brokenthorn.com)',
-    'JamesM      (http://www.jamesmolloy.co.uk)',
-    'SirStorm25  (???)',
-    'Uranium-239 (???)',
-    'Napalm      (???)',
-    'Xiaoming    (http://en.skelix.org)'
+  ThanksList: array [1..8] of String = (
+    'Brendan       (http://www.osdever.net\bkerndev)',
+    'Mike          (http://www.brokenthorn.com)',
+    'JamesM        (http://www.jamesmolloy.co.uk)',
+    'SirStorm25    (???)',
+    'Uranium-239   (???)',
+    'Napalm        (???)',
+    'Xiaoming      (http://en.skelix.org)',
+    'Yacine REZGUI (yacine.rezgui@gmail.com)'
     );
 var
   i: Byte;
