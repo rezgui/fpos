@@ -12,8 +12,7 @@ uses
   rtc,
   pmm,
   vmm,
-  heap,
-  tests;
+  heap;
 
 var
   KernelEnd: LongWord; external name 'end'; // End of kernel
@@ -76,9 +75,6 @@ begin
   asm
     sti
   end;
-
-  LinkedListTest;
-  WriteLnTest;
 
   WriteLn(LineEnding+'Welcome to FPOS Shell!');
   Write('FPOS>');
