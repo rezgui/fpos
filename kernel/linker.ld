@@ -17,7 +17,6 @@ obj\pmm.o
 obj\vmm.o
 obj\heap.o
 obj\rtc.o
-obj\tests.o
 ..\rtl\units\i386-fpos\system.o
 ..\rtl\units\i386-fpos\x86.o
 )
