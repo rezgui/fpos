@@ -1,8 +1,8 @@
 # FPOS - Free Pascal Operating System  <img src="https://img.shields.io/badge/Code-FreePascal-blue"> <img src="https://img.shields.io/badge/Version-0.01-green"> 
-<p align="right">Started in : 01-01-2010</p>
+<p align="right">Project started in 01-01-2010 and coded with ❤️</p>
 
 <p align="center">
-  
+  <img src="res/fpos.png">
 </p>
 
 ## Introduction :
@@ -38,7 +38,7 @@ Boot             |  Shell (CLI) | Command (Help)
 - Updated to FPC RTL revision 14499
 
 ## ➕ Added :
-- Not planned for now
+- Not 📅 planned for now
 
 ## 📝 Note :
 - Some files are not used due to unusability ( multitasking & filesystem )
@@ -49,10 +49,8 @@ Boot             |  Shell (CLI) | Command (Help)
 - Open Command Prompt ( start->run->cmd ), cd to fpos top directory, then type 'make'
 
 ## ⚗️ How to test :
-- Adapt "run on (Qemu | Bochs).bat" to your Qemu / Bochs installation
-
-* : on Linux, you must change 'i386-linux-ld' in make.rules to 'ld'
-**: Windows only, most Linux users should get them easily
+- Adapt **(Qemu or Bochs).bat** to your Qemu / Bochs installation
+- On Linux, you must change 'i386-linux-ld' in make.rules to 'ld'
 
 ## ❤️ Contributing
 Contributions, issues and feature requests are welcome!
