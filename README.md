@@ -2,7 +2,7 @@
 <p align="right">Project started in 01-01-2010 and coded with ❤️</p>
 
 <p align="center">
-  <img src="res/fpos.png">
+  <img src="res/fpos_logo.png">
 </p>
 
 ## Introduction :
