@@ -13,7 +13,7 @@ FPOS is a operating system consists of a minimal kernel built on FreePascal. It 
 
 Boot             |  Shell (CLI) | Command (Help)
 :-------------------------:|:-------------------------:|:-------------------------:
-<img src="res/fpos_boot.png" width="300">  |  <img src="res/fpos_boot.png" width="300">|  <img src="res/fpos_boot.png" width="300">
+<img src="res/fpos_boot.png" width="300">  |  <img src="res/fpos_shell.png" width="300">|  <img src="res/fpos_command.png" width="300">
 
 Bugs and help / improvements will be appreciated, please send them to (Yacine REZGUI) yacine.rezgui@gmail.com and (Mario Ray Mahardhika) leledumbo_cool@yahoo.co.id.
 
