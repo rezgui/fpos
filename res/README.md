@@ -1,5 +1,5 @@
 # Screenshoot of FPOS Screens
 - Booting
-- Shell
+- Shell (CLi)
 - Some command (Help)
 
