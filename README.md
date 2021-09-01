@@ -1,4 +1,4 @@
-# FPOS - Free Pascal Operating System  <img src="https://img.shields.io/badge/Code-FreePascal-blue"> <img src="https://img.shields.io/badge/Code-ASM-red">
+# FPOS - Free Pascal Operating System  <img src="https://img.shields.io/badge/Code-FreePascal-blue"> 
 <p align="right">version 0.01 -  Date Build : 01-01-2010</p>
 
 <p align="center">
@@ -7,7 +7,7 @@
 
 ## Introduction :
 <img align="right" src="https://wiki.freepascal.org/images/9/92/built_with_fpc_logo.png">
-FPOS is a operating system consists of a minimal kernel built on FreePascal and asm. It contains a Scheme implementation of a hard drive (ATA) driver, keyboard (PS2), serial (8250 UART), FAT32 filesystem and a small real time clock manager. The project was built to experiment with developement of operating system using a high level functional language to study the developement process and the use of Scheme to build a fairly complex system.
+FPOS is a operating system consists of a minimal kernel built on FreePascal. It contains a Scheme implementation of a hard drive (ATA) driver, keyboard (PS2), serial (8250 UART), FAT32 filesystem and a small real time clock manager. The project was built to experiment with developement of operating system using a high level functional language to study the developement process and the use of Scheme to build a fairly complex system.
 <br><br>
 
 
