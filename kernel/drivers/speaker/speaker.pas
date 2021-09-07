@@ -15,58 +15,39 @@
 // You should have received a copy of the GNU General Public License
 // along with fpos.  If not, see <http://www.gnu.org/licenses/>.
 
-unit tests;
+unit speaker;
 
 interface
 
-procedure LinkedListTest;
-procedure WriteLnTest;
+procedure Sound(Hz: LongWord);
+procedure NoSound;
 
 implementation
 
-type
-  PT = ^TT;
+uses
+  x86;
 
-  TT = record
-    Value: LongWord;
-    Next: PT;
-  end;
-
-procedure LinkedListTest;
+procedure Sound(Hz: LongWord); [public, alias: 'Sound'];
 var
-  P, T: PT;
-  i: LongWord;
+  Divisor: LongWord;
+  Temp: Byte;
 begin
-  WriteLn('Testing for linked lists...');
-  New(P);
-  T := P;
-  T^.Value := 0;
-  for i := 1 to 5 do begin
-    New(T^.Next);
-    T := T^.Next;
-    with T^ do begin
-      Value := i;
-      Next := nil;
-    end;
-  end;
-  T := P;
-  while Assigned(T) do begin
-    WriteLn('$' + HexStr(PtrUInt(T), 8) + ' = ',T^.Value);
-    P := T;
-    T := T^.Next;
-    Dispose(P);
-  end;
+  Divisor := 1193180 div Hz;
+  WritePortB($43, $B6);
+  WritePortB($42, Divisor);
+  WritePortB($42, Divisor shr 8);
+  Temp := ReadPortB($61);
+  if Temp <> (Temp or 3) then
+    WritePortB($61, Temp or 3);
 end;
 
-procedure WriteLnTest;
-type
-  TEnum = (a, b, c);
+procedure NoSound;
 var
-  e: TEnum;
+  Temp: Byte;
 begin
-  WriteLn('Testing for WriteLn of many types...');
-  e := c;
-  WriteLn('Test string ', 255, ' ', 12.34, ' ', 1.5e+10: 2: 4, ' ', e);
+  Temp := ReadPortB($61) and $FC;
+  WritePortB($61, Temp);
 end;
 
 end.
+
