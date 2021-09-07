@@ -1,10 +1,10 @@
 include make.rules
 
-all: clean-boot cleancompile iso
+all: fpos
 
 iso: clean-iso makeiso
 
-fpos: compile iso
+fpos: clean-boot clean-rtl clean-kernel compile iso
 
 clean: clean-rtl clean-kernel clean-boot clean-iso
 
@@ -26,13 +26,9 @@ rtl:
 kernel: 
 	make -C kernel
 
-rtlwithclean: clean-rtl rtl
-
-kernelwithclean: clean-kernel kernel
-
-compile: rtl kernel
-
-cleancompile: rtlwithclean kernelwithclean
+compile: 
+	make -C rtl
+	make -C kernel
 
 makeiso:
 	$(CP) build/fpos.bin iso/boot/fpos.bin

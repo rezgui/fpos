@@ -29,7 +29,9 @@ uses
   rtc,
   pmm,
   vmm,
-  heap;
+  heap,
+  crc,
+  bios_data;
 
 var
   KernelEnd: LongWord; external name 'end'; // End of kernel

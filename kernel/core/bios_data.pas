@@ -68,14 +68,14 @@ const
 var
     Counters : TCounters;
 
-procedure tick_update(data : void);
+procedure tick_update(data : PLongWord);
 
 implementation
 
 uses
     console, vmm;
 
-procedure tick_update(data : void);
+procedure tick_update(data : PLongWord);
 begin
     //BD^.Ticks:= BD^.Ticks + 1;
     inc(BD^.Ticks);
