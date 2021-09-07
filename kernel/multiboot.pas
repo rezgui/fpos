@@ -31,7 +31,34 @@ type
     ELFSection: TELFHeaderSection;
     MemoryMapLength: LongWord;
     MemoryMapAddress: LongWord;
+
+          DrivesLength : LongWord;
+          DrivesAddress: LongWord;
+        
+          ConfigTtable : LongWord;
+          
+          BootLoaderName : LongWord;
+          
+          ApmTable: LongWord;
+          
+          Vbe_control_info : LongWord;
+          Vbe_mode_info : LongWord;
+          Vbe_mode : Word;
+          Vbe_interface_seg : Word;
+          Vbe_interface_off : Word;
+          Vbe_interface_len : Word;
+          
+          Framebuffer_Address  : QWord;
+          Framebuffer_pitch : LongWord;
+          Framebuffer_width : LongWord;
+          Framebuffer_height: LongWord;
+          Framebuffer_bpp : Byte;    
   end;
+
+
+
+
+
 
   PModule = ^TModule;
 
