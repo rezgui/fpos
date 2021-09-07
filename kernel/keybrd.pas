@@ -150,16 +150,18 @@ begin
           Include(KeyStatus, ksShift);
       58: if not (ksCapsLock in KeyStatus) then begin
           { KeyStatus and $8=0 }// Caps Lock = off
-          while ReadPortB($64) and 2 = 0 do ; // Will break if keyboard isn't busy
+          //while ReadPortB($64) and 2 = 0 do ; // Will break if keyboard isn't busy
           WritePort($60, $ED);
           WritePort($60, ReadPortB($60) or $8); // Turns on Caps Lock light
           // in bitwise, KeyStatus:=KeyStatus or $8;
           Include(KeyStatus, ksCapsLock);
-        end else begin
-          while ReadPortB($64) and 2 = 0 do ; // Will break if keyboard isn't busy
+          exit;
+        end else if (ksCapsLock in KeyStatus) then begin
+          //while ReadPortB($64) and 2 = 0 do ; // Will break if keyboard isn't busy
           WritePort($60, $ED);
           WritePort($60, ReadPortB($60) and %11110111);
           Exclude(KeyStatus, ksCapsLock);
+          exit;
         end;
     end;
     { Shift priority is higher than Caps Lock, why?

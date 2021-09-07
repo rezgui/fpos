@@ -1,11 +1,16 @@
-nppBackup*
-nppBackup/
-*.iso
-kernel/obj/*.o
-kernel/obj/*.ppu
-kernel/obj/*.a
-rtl/units/i386-fpos/*.o
-rtl/units/i386-fpos/*.ppu
-rtl/units/i386-fpos/*.a
-rtl/units/i386-fpos/*.rst
+.vscode/launch.json
+.vscode
+/nppBackup*
+/nppBackup/
+/kernel/obj/*.o
+/kernel/obj/*.ppu
+/kernel/obj/*.a
+/rtl/units/i386-fpos/*.o
+/rtl/units/i386-fpos/*.ppu
+/rtl/units/i386-fpos/*.a
+/rtl/units/i386-fpos/*.rst
+/*.iso
+/*.md5
+/*.sh~
+/*.img
 
