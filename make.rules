@@ -5,6 +5,7 @@ LD=ld
 MKISOFS=mkisofs
 RM=rm -f
 RRM=rm -rf
+CP=cp
 
 # Used by all build mode:
 # ELF executable target, Intel style assembler reader, allow assertions,
@@ -34,8 +35,9 @@ FPCOPT=$(OPT) -CX -CfSSE3 -XXs -O3
 # Compiled system unit directory
 SYSUNITDIR=-Fu../units/i386-fpos
 
-# Compiled system Inlude directory
-IFCP=-Fidrivers
+# Inlude units drivers directory
+#IFPC=-Fucore -Fudrivers -Fudrivers/bus -Fudrivers/hid -Fudrivers/net -Fudrivers/netdev -Fudrivers/serial -Fudrivers/speaker -Fudrivers/storage -Fudrivers/timer -Fudrivers/test
+IFPC=-Fucore -Fu'drivers/*'
 
 RTLOUTDIR=$(SYSUNITDIR) -FU../units/i386-fpos
 

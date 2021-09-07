@@ -1,24 +1,12 @@
 include make.rules
 
-all: fpos
+all: clean-boot cleancompile iso
 
-rtl:
-	make -C rtl
+iso: clean-iso makeiso
 
-kernel:
-	make -C kernel
+fpos: compile iso
 
-compile:
-	make -C rtl
-	make -C kernel
-
-iso:
-	$(MKISOFS) -R -b boot/grub/stage2_eltorito -no-emul-boot \
-		-boot-load-size 4 -boot-info-table -o fpos.iso iso	
-
-fpos: compile
-	$(MKISOFS) -R -b boot/grub/stage2_eltorito -no-emul-boot \
-		-boot-load-size 4 -boot-info-table -o fpos.iso iso			
+clean: clean-rtl clean-kernel clean-boot clean-iso
 
 clean-rtl:
 	make -C rtl clean
@@ -26,6 +14,27 @@ clean-rtl:
 clean-kernel:
 	make -C kernel clean
 
-clean: clean-rtl clean-kernel
-	$(RM) fpos.iso
-	$(RM) iso/boot/fpos.bin
+clean-boot: 
+	$(RM) build/fpos.bin
+
+clean-iso: 
+	$(RM) build/fpos.iso
+
+rtl: 
+	make -C rtl
+
+kernel: 
+	make -C kernel
+
+rtlwithclean: clean-rtl rtl
+
+kernelwithclean: clean-kernel kernel
+
+compile: rtl kernel
+
+cleancompile: rtlwithclean kernelwithclean
+
+makeiso:
+	$(CP) build/fpos.bin iso/boot/fpos.bin
+	$(MKISOFS) -R -b boot/grub/stage2_eltorito -no-emul-boot \
+		-boot-load-size 4 -boot-info-table -o build/fpos.iso iso	
