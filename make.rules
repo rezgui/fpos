@@ -3,6 +3,8 @@ NASM=nasm
 FPC=fpc
 LD=ld
 MKISOFS=mkisofs
+RM=rm -f
+RRM=rm -rf
 
 # Used by all build mode:
 # ELF executable target, Intel style assembler reader, allow assertions,
@@ -32,4 +34,9 @@ FPCOPT=$(OPT) -CX -CfSSE3 -XXs -O3
 # Compiled system unit directory
 SYSUNITDIR=-Fu../units/i386-fpos
 
+# Compiled system Inlude directory
+IFCP=-Fidrivers
+
 RTLOUTDIR=$(SYSUNITDIR) -FU../units/i386-fpos
+
+

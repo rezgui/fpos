@@ -5,7 +5,7 @@ all:
 	make -C inc
 
 clean:
-	rm -f units/i386-fpos/*.ppu
-	rm -f units/i386-fpos/*.o
-	rm -f units/i386-fpos/*.a
-	rm -f units/i386-fpos/*.rst
+	$(RM) units/i386-fpos/*.ppu
+	$(RM) units/i386-fpos/*.o
+	$(RM) units/i386-fpos/*.a
+	$(RM) units/i386-fpos/*.rst
