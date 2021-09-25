@@ -219,16 +219,18 @@ begin
         WriteString('FPOS>');
       end;
       #0: begin // Control characters
-        while WhereX > 5 do
-          WriteChar(#8); // clean up line
         case ScanCode of
           72: begin // Up arrow
+            while WhereX > 5 do
+            WriteChar(#8); // clean up line
             CommandBuffer := PreviousCommand;
             WriteString(CommandBuffer);
           end;
           75: ;//GoToXY(WhereX-1,WhereY); // Left arrow
           77: ;//GoToXY(WhereX+1,WhereY); // Right arrow
           80: begin // Down arrow
+            while WhereX > 5 do
+            WriteChar(#8); // clean up line
             CommandBuffer := NextCommand;
             WriteString(NextCommand);
           end;
