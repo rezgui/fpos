@@ -30,6 +30,7 @@ type
 function WhereX: Word;
 function WhereY: Word;
 procedure GoToXY(const X, Y: Word);
+procedure BlinkCursor;
 procedure ClearScreen;
 procedure WriteChar(const c: Char);
 procedure WritePChar(P: PChar);
@@ -46,7 +47,7 @@ procedure Install;
 implementation
 
 uses
-  x86, keybrd;
+  x86, keybrd, mouse;
 
 var
   // Video memory array
