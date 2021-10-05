@@ -26,6 +26,7 @@ uses
   irq,
   timer,
   keybrd,
+  mouse,
   rtc,
   pmm,
   vmm,
@@ -86,6 +87,7 @@ begin
   IRQ.Install;
   Timer.Install(500);
   Keybrd.Install;
+  Mouse.Install;
   RTC.Install;
   PMM.Install(MB^.UpperMemory);
   VMM.Install;
