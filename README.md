@@ -1,8 +1,13 @@
-# FPOS - Free Pascal Operating System  <img src="https://img.shields.io/badge/Code-FreePascal-blue"> <img src="https://img.shields.io/badge/Version-0.01-green"> [![Treeware](https://img.shields.io/badge/dynamic/json?color=brightgreen&label=Treeware&query=%24.total&url=https%3A%2F%2Fpublic.offset.earth%2Fusers%2Ftreeware%2Ftrees)](https://treeware.earth)
-<p align="right">Project started in 01-01-2010 and coded with ❤️</p>
+# FPOS - Free Pascal Operating System
+<div align="right">
+<img src="https://img.shields.io/badge/Code-FreePascal-blue">
+<img src="https://img.shields.io/badge/Version-0.01-green"> 
+<a href="https://treeware.earth" target="_blank"><img src="https://img.shields.io/badge/dynamic/json?color=brightgreen&label=Treeware&query=%24.total&url=https%3A%2F%2Fpublic.offset.earth%2Fusers%2Ftreeware%2Ftrees" /></a>
+</div>
+
 
 <p align="center">
-  <img src="res/fpos_logo.png">
+  <img src="res/fpos_logo.png"><br/>Project started in 01-01-2010 and coded with ❤️
 </p>
 
 ## Introduction :
