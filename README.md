@@ -1,4 +1,4 @@
-# FPOS - Free Pascal Operating System  <img src="https://img.shields.io/badge/Code-FreePascal-blue"> <img src="https://img.shields.io/badge/Version-0.01-green"> 
+# FPOS - Free Pascal Operating System  <img src="https://img.shields.io/badge/Code-FreePascal-blue"> <img src="https://img.shields.io/badge/Version-0.01-green"> [![Treeware](https://img.shields.io/badge/dynamic/json?color=brightgreen&label=Treeware&query=%24.total&url=https%3A%2F%2Fpublic.offset.earth%2Fusers%2Ftreeware%2Ftrees)](https://treeware.earth)
 <p align="right">Project started in 01-01-2010 and coded with ❤️</p>
 
 <p align="center">
@@ -55,16 +55,9 @@ Boot             |  Shell (CLI) | Command (Help)
 ## ❤️ Contributing
 Contributions, issues and feature requests are welcome!
 
-## License
+## 📓 License
 
 The  GPL-2.0 License. Please see [License File](LICENSE.md) for more information.
 
-## Treeware
-
-You're free to use this OS, but if it makes it to your production environment you are required to buy the world a tree.
-
-It’s now common knowledge that one of the best tools to tackle the climate crisis and keep our temperatures from rising above 1.5C is to <a href="https://www.bbc.co.uk/news/science-environment-48870920">plant trees</a>. If you support this OS and contribute to the Treeware forest you’ll be creating employment for local families and restoring wildlife habitats.
-
-You can buy trees here [offset.earth/treeware](https://plant.treeware.earth/rezgui/fpos)
-
-Read more about Treeware at [treeware.earth](http://treeware.earth)
+## 🌳 Treeware
+This Operating System is a Treeware. If you use it in production, then we ask that you buy the world a tree to thank us for our work. By contributing to the Treeware forest you’ll be creating employment for local families and restoring wildlife habitats. Read more about Treeware at [treeware.earth](http://treeware.earth)
