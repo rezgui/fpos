@@ -60,8 +60,14 @@ Boot             |  Shell (CLI) | Command (Help)
 ## ❤️ Contributing
 Contributions, issues and feature requests are welcome!
 
-## 📓 License
+## 🙏 Thanks to
+- **[@achief-ws](https://github.com/renderedideas-lab)**
+- **[@Sio](https://github.com/SANiK)**
+- **[@James T. Sprinkle](https://github.com/the-grue)**
+- **[@Steve Jenson](https://github.com/stevej)**
+- and Other [here](CONTRIBUTORS.md)
 
+## 📓 License
 The  GPL-2.0 License. Please see [License File](LICENSE.md) for more information.
 
 ## 🌳 Treeware
