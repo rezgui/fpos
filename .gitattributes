@@ -1,1 +1,5 @@
 *.inc linguist-language=Pascal
+*.pas linguist-language=Pascal
+*.pp linguist-language=Pascal
+*.asm linguist-language=Assembly
+MAKEFILE linguist-language=Makefile
