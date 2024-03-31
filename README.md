@@ -10,6 +10,16 @@
   <img src="res/fpos_logo.png"><br/>Project started in 01-01-2010 and coded with ❤️
 </p>
 
+## Attention :
+This project is far from dead, but it requires revision...
+A new bootloader will be utilized for execution on 64-bit architecture. Additionally, new functionalities will be implemented:
+- An integrated file system implementation supporting FAT32, NTFS, ext-versions, and much more.
+- Multitasking extension for running many subprograms simultaneously.
+- Extendable hardware driver slots for multitasking capability.
+- An API for accessing all public kernel functionalities.
+- A graphical user interface (possibly as a separate threading application).
+Many modern features will follow, but please be patient...
+
 ## Introduction :
 <img align="right" src="https://wiki.freepascal.org/images/9/92/built_with_fpc_logo.png">
 FPOS is a operating system consists of a minimal kernel built on FreePascal. It contains a Scheme implementation of a hard drive (ATA) driver, keyboard (PS2), serial (8250 UART), FAT32 filesystem and a small real time clock manager. The project was built to experiment with developement of operating system using a high level functional language to study the developement process and the use of Scheme to build a fairly complex system.
