@@ -10,7 +10,7 @@
   <img src="res/fpos_logo.png"><br/>Project started in 01-01-2010 and coded with ❤️
 </p>
 
-## Attention :
+# ‼️ Attention :
 This project is far from dead, but it requires revision...
 A new bootloader will be utilized for execution on 64-bit architecture. Additionally, new functionalities will be implemented:
 - An integrated file system implementation supporting FAT32, NTFS, ext-versions, and much more.
