@@ -31,8 +31,95 @@ const
   ID_BIT = $200000; // EFLAGS ID bit
 
 type
-  TCPUID = array [1..4] of LongInt;
-  TVendor = array [0..11] of Char;
+    PCapabilities_Old = ^TCapabilities_Old;
+    TCapabilities_Old = bitpacked record
+        FPU   : Boolean;  
+        VME   : Boolean;  
+        DE    : Boolean;  
+        PSE   : Boolean;  
+        TSC   : Boolean;  
+        MSR   : Boolean;  
+        PAE   : Boolean;  
+        MCE   : Boolean;  
+        CX8   : Boolean;  
+        APIC  : Boolean;
+        RESV0 : Boolean;  
+        SEP   : Boolean; 
+        MTRR  : Boolean; 
+        PGE   : Boolean; 
+        MCA   : Boolean; 
+        CMOV  : Boolean; 
+        PAT   : Boolean; 
+        PSE36 : Boolean; 
+        PSN   : Boolean; 
+        CLF   : Boolean; 
+        RESV1 : Boolean;
+        DTES  : Boolean;  
+        ACPI  : Boolean;  
+        MMX   : Boolean;  
+        FXSR  : Boolean;  
+        SSE   : Boolean;  
+        SSE2  : Boolean;  
+        SS    : Boolean;  
+        HTT   : Boolean;  
+        TM1   : Boolean;  
+        IA64  : Boolean; 
+        PBE   : Boolean;
+    end;
+    PCapabilities_New = ^TCapabilities_New;
+    TCapabilities_New = bitpacked record
+        SSE3         : Boolean; 
+        PCLMUL       : Boolean;
+        DTES64       : Boolean;
+        MONITOR      : Boolean;  
+        DS_CPL       : Boolean;  
+        VMX          : Boolean;  
+        SMX          : Boolean;  
+        EST          : Boolean;  
+        TM2          : Boolean;  
+        SSSE3        : Boolean;  
+        CID          : Boolean;
+        RESV0        : Boolean;
+        FMA          : Boolean;
+        CX16         : Boolean; 
+        ETPRD        : Boolean; 
+        PDCM         : Boolean;
+        RESV1        : Boolean; 
+        PCIDE        : Boolean; 
+        DCA          : Boolean; 
+        SSE4_1       : Boolean; 
+        SSE4_2       : Boolean; 
+        x2APIC       : Boolean; 
+        MOVBE        : Boolean; 
+        POPCNT       : Boolean; 
+        RESV2        : Boolean;
+        AES          : Boolean; 
+        XSAVE        : Boolean; 
+        OSXSAVE      : Boolean; 
+        AVX          : Boolean;
+        RESV3        : Boolean;
+        RDRAND       : Boolean;
+        RESV5        : Boolean;
+    end;
+    TClockSpeed = record
+        Hz  : uint32;
+        KHz : uint32;
+        MHz : uint32;
+        GHz : uint32;
+    end;
+    TCPUID = record
+        ClockSpeed    : TClockSpeed;
+        Identifier    : Array[0..12] of Char;
+        Capabilities0 : PCapabilities_Old;
+        Capabilities1 : PCapabilities_New;
+    end;
+
+
+    TVendor = array [0..11] of Char;
+
+var
+    CPUID            : TCPUID;
+    CAP_OLD, CAP_NEW : uint32;
 
 function IsCPUAvailable: Boolean;
 function GetCPUID: TCPUID; assembler;
@@ -122,57 +209,3 @@ end;
 
 end.
 
-procedure getCPUIdentifier;
-var
-    id0, id1, id2 : uint32;
-    id : pchar;
-    i : uint32;
-
-begin
-    asm
-        PUSH EAX
-        PUSH EBX
-        PUSH ECX
-        PUSH EDX
-        MOV EAX, 0
-        CPUID
-        MOV id0, EBX
-        MOV id1, EDX
-        MOV id2, ECX
-        POP EDX
-        POP ECX
-        POP EBX
-        POP EAX
-    end;
-    CPUID.Identifier[12]:= char(0);
-    id:= pchar(@id0);
-    for i:=0 to 3 do begin
-        CPUID.Identifier[0+i]:= id[i];
-    end;
-    id:= pchar(@id1);
-    for i:=0 to 3 do begin
-        CPUID.Identifier[4+i]:= id[i];
-    end;
-    id:= pchar(@id2);
-    for i:=0 to 3 do begin
-        CPUID.Identifier[8+i]:= id[i];
-    end;
-end;
-
-function GetCPUID: TCPUID; assembler;
-asm
-  push    ebx         {save affected register}
-  push    edi
-  mov     edi,eax     {@result}
-  mov     eax,1
-  cpuid
-  stosd               {cpuid[1]}
-  mov     eax,ebx
-  stosd               {cpuid[2]}
-  mov     eax,ecx
-  stosd               {cpuid[3]}
-  mov     eax,edx
-  stosd               {cpuid[4]}
-  pop     edi         {restore registers}
-  pop     ebx
-end ['eax','edx','ebx','ecx','edi'];
