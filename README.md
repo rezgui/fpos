@@ -63,19 +63,22 @@ Boot             |  Shell (CLI) | Command (Help)
 - Copy executables** under tools to a directory listed in your PATH ( or Path )
 - Open Command Prompt ( start->run->cmd ), cd to fpos top directory, then type 'make'
 
-## ⚗️ How to test :
+## :battery: How to test :
 - Adapt **(Qemu or Bochs).bat** to your Qemu / Bochs installation
 - On Linux, you must change 'i386-linux-ld' in make.rules to 'ld'
 
-## ❤️ Contributing
+## :heart: Contributing
 Contributions, issues and feature requests are welcome!
 
-## 🙏 Thanks to
+## :pray: Thanks to
 - **[@achief-ws](https://github.com/renderedideas-lab)**
 - **[@Sio](https://github.com/SANiK)**
 - **[@James T. Sprinkle](https://github.com/the-grue)**
 - **[@Steve Jenson](https://github.com/stevej)**
 - and Other [here](CONTRIBUTORS.md)
+
+## :link: Other Link
+- [Awesome Operating System Stuff](https://github.com/rezgui/AwesomeOS)
 
 ## 📓 License
 The  GPL-2.0 License. Please see [License File](LICENSE.md) for more information.
