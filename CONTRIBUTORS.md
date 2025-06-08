@@ -1,5 +1,4 @@
 # Thanks List
-  
 - Brendan       http://www.osdever.net\bkerndev
 - Mike          (http://www.brokenthorn.com)
 - JamesM        (http://www.jamesmolloy.co.uk)
